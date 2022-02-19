@@ -199,10 +199,6 @@ flex-direction: row;
 align-items: flex-start;
 padding: 10px 16px;
 
-&, select, textarea {
-    color: rgba(240, 248, 255, 0.64);
-}
-
 position: static;
 width: 488px;
 height: 140px;
@@ -210,22 +206,27 @@ left: calc(50% - 488px/2);
 top: 14.63%;
 bottom: 0%;
 
-/* white/06.slight */
-
 background: rgba(240, 248, 255, 0.04);
-/* white/03.help */
 
 border: 1px solid rgba(240, 248, 255, 0.32);
 box-sizing: border-box;
 border-radius: 4px;
-
-/* Inside auto layout */
 
 flex: none;
 order: 1;
 align-self: stretch;
 flex-grow: 0;
 margin: 8px 0px 0px;
+
+&, select, textarea {
+    color: rgba(240, 248, 255, 0.64);
+}
+&:hover {
+    border: 1px solid #F0F8FF;
+}
+&:focus {
+    outline: 1px solid #27B18A;
+}
 `
 
 export const Submit = styled.input`
@@ -240,23 +241,29 @@ height: 44px;
 left: 0px;
 top: 0px;
 
-/* Gradients/Green Button */
+font-family: Montserrat, sans-serif, Helvetica;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 24px;
+
+text-align: center;
+letter-spacing: 0.0666667px;
+
+color: #F0F8FF;
 
 background: linear-gradient(90deg, #27B18A 0%, #317D6C 100%);
 box-shadow: 0px 0px 8px rgba(39, 177, 138, 0.32);
 border-radius: 8px;
 
-/* Inside auto layout */
-
 flex: none;
 order: 0;
 flex-grow: 0;
 margin: 0px 16px;
+border-style: none;
 `
 
 export const Discard = styled.button`
-/* Auto layout */
-
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -268,15 +275,23 @@ height: 44px;
 left: 183px;
 top: 0px;
 
-/* White/Help */
+font-family: Montserrat, sans-serif, Helvetica;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 24px;
+
+text-align: center;
+letter-spacing: 0.0666667px;
+
+color: #F0F8FF;
 
 background: rgba(240, 248, 255, 0.32);
 border-radius: 8px;
-
-/* Inside auto layout */
 
 flex: none;
 order: 1;
 flex-grow: 0;
 margin: 0px 16px;
+border-style: none;
 `
