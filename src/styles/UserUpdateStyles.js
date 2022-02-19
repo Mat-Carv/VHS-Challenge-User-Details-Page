@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 
+//----------------------------------------------------- Containers
 // Container for the Form side of the page
 export const Frame668 = styled.div`
 display: flex;
@@ -10,8 +11,6 @@ padding: 0px;
 position: absolute;
 width: 489px;
 height: 867px;
-left: 460px;
-top: 132px;
 `
 
 // Container for the main body of the Form
@@ -70,6 +69,30 @@ flex-grow: 0;
 margin: 30px 0px;
 `
 
+export const InputContainer = styled.div`
+/* Auto layout */
+
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+padding: 0px;
+
+position: static;
+left: 0%;
+right: 0%;
+top: 8.51%;
+bottom: 79.26%;
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+flex-grow: 0;
+margin: 32px 0px;
+`
+
+//----------------------------------------------------- Form Components
 export const ServiceTitle = styled.h3`
 position: static;
 width: 106px;
@@ -115,7 +138,9 @@ left: calc(50% - 488px/2);
 top: 35.29%;
 bottom: 0%;
 
-/* white/06.slight */
+&, select, textarea {
+    color: rgba(240, 248, 255, 0.64);
+}
 
 background: rgba(240, 248, 255, 0.04);
 /* white/03.help */
@@ -138,6 +163,8 @@ align-self: stretch;
 flex-grow: 0;
 margin: 8px 0px;
 `
+
+
 
 export const Submit = styled.input`
 display: flex;

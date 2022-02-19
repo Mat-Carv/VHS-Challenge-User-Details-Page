@@ -1,8 +1,13 @@
 import React from "react";
-import * as Styles from '../styles/UserUpdateStyles'
+import * as Styles from '../styles/UserUpdateStyles';
+import { useForm } from "react-hook-form";
+import { useState, setState } from "react";
 
 function UserUpdate() { 
-    return (
+    
+  const { register, handleSubmit, errors } = useForm();
+  
+  return (
     <>
       <Styles.Frame668>
         
@@ -10,11 +15,27 @@ function UserUpdate() {
 
           <Styles.Frame667>
             <Styles.ServiceTitle>Settings</Styles.ServiceTitle>
+            
+            <Styles.InputContainer>
+              <Styles.Input type="text" placeholder="First Name*" name="first_name" />
+            </Styles.InputContainer>
 
-            <Styles.Input type="text" placeholder="First Name*" name="first_name" />
-            <Styles.Input type="text" placeholder="Last Name*" name="last_name" />
-            <Styles.Input type="email" placeholder="Email*" name="email" />
-            <Styles.Input type="text" placeholder="Phone*" name="phone" />
+            <Styles.InputContainer>
+              <Styles.Input type="text" placeholder="Last Name*" name="last_name" />
+            </Styles.InputContainer>
+            
+            <Styles.InputContainer>
+              <Styles.Input type="email" placeholder="Email*" name="email" />
+            </Styles.InputContainer>
+
+            <Styles.InputContainer>
+              <Styles.Input type="text" placeholder="Phone*" name="phone" />
+            </Styles.InputContainer>
+
+            <Styles.InputContainer>
+              <Styles.Input type="date" name="day_of_birth" />
+            </Styles.InputContainer>
+            
           </Styles.Frame667>
 
           <Styles.Frame171>
