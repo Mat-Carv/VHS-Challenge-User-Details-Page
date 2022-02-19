@@ -1,5 +1,5 @@
 import React from "react";
-import * as Styles from '../styles/UserUpdateStyles';
+import * as s from '../styles/UserUpdateStyles'; // Emotion s
 import { useForm } from "react-hook-form";
 import { useState, setState } from "react";
 
@@ -9,45 +9,55 @@ function UserUpdate() {
   
   return (
     <>
-      <Styles.Frame668>
+      <s.Frame668>
         
-        <Styles.Form>
+        <s.Form>
 
-          <Styles.Frame667>
-            <Styles.ServiceTitle>Settings</Styles.ServiceTitle>
+          <s.Frame667>
+            <s.ServiceTitle>Settings</s.ServiceTitle>
             
-            <Styles.InputContainer>
-              <Styles.Input type="text" placeholder="First Name*" name="first_name" />
-            </Styles.InputContainer>
+            <s.InputContainer>
+              <s.Label htmlFor="first_name">First Name*</s.Label>
+              <s.Input type="text" name="first_name" />
+            </s.InputContainer>
 
-            <Styles.InputContainer>
-              <Styles.Input type="text" placeholder="Last Name*" name="last_name" />
-            </Styles.InputContainer>
+            <s.InputContainer>
+              <s.Label htmlFor="last_name">Last Name*</s.Label>
+              <s.Input type="text" name="last_name" />
+            </s.InputContainer>
             
-            <Styles.InputContainer>
-              <Styles.Input type="email" placeholder="Email*" name="email" />
-            </Styles.InputContainer>
+            <s.InputContainer>
+              <s.Label htmlFor="email">Email*</s.Label>
+              <s.Input type="email" name="email" />
+            </s.InputContainer>
 
-            <Styles.InputContainer>
-              <Styles.Input type="text" placeholder="Phone*" name="phone" />
-            </Styles.InputContainer>
+            <s.InputContainer>
+              <s.Label htmlFor="phone">Phone*</s.Label>
+              <s.Input type="text" name="phone" />
+            </s.InputContainer>
 
-            <Styles.InputContainer>
-              <Styles.Input type="date" name="day_of_birth" />
-            </Styles.InputContainer>
+            <s.InputContainer>
+              <s.Label htmlFor="date_of_birth">Select your date of birth*</s.Label>
+              <s.Input type="date" name="date_of_birth" />
+            </s.InputContainer>
+
+            <s.InputContainer>
+              <s.Label htmlFor="bio">Bio*</s.Label>
+              <s.TextArea name="bio" />
+            </s.InputContainer>
             
-          </Styles.Frame667>
+          </s.Frame667>
+          
+          <s.Frame171>
+            <s.Separator></s.Separator>
+            <s.Frame168>
+              <s.Submit type="submit"/>
+              <s.Discard>Discard</s.Discard>
+            </s.Frame168>
+          </s.Frame171>  
+        </s.Form>
 
-          <Styles.Frame171>
-            
-            <Styles.Frame168>
-              <Styles.Submit type="submit"/>
-              <Styles.Discard>Discard</Styles.Discard>
-            </Styles.Frame168>
-          </Styles.Frame171>  
-        </Styles.Form>
-
-      </Styles.Frame668>
+      </s.Frame668>
     </>
     );
 };

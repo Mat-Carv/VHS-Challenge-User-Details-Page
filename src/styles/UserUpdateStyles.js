@@ -10,7 +10,7 @@ padding: 0px;
 
 position: absolute;
 width: 489px;
-height: 867px;
+
 `
 
 // Container for the main body of the Form
@@ -21,15 +21,15 @@ align-items: flex-start;
 padding: 0px;
 
 position: static;
-width: 488px;
-height: 752px;
+width: 100%;
+
 left: 0px;
 top: 0px;
 
 flex: none;
 order: 0;
 flex-grow: 0;
-margin: 40px 0px;
+margin: 32px 0px;
 `
 
 // Container for the Save Changes & Discard Buttons
@@ -48,7 +48,7 @@ top: 792px;
 flex: none;
 order: 1;
 flex-grow: 0;
-margin: 40px 0px;
+margin: 30px 0px;
 `
 
 export const Frame168 = styled.div`
@@ -70,31 +70,15 @@ margin: 30px 0px;
 `
 
 export const InputContainer = styled.div`
-/* Auto layout */
-
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-padding: 0px;
-
-position: static;
-left: 0%;
-right: 0%;
-top: 8.51%;
-bottom: 79.26%;
-
-
-/* Inside auto layout */
-
 flex: none;
 order: 1;
 flex-grow: 0;
-margin: 32px 0px;
+margin: 16px 0px;
 `
 
-//----------------------------------------------------- Form Components
+//----------------------------------------------------- Page Components
 export const ServiceTitle = styled.h3`
-position: static;
+position: relative;
 width: 106px;
 height: 32px;
 left: 0px;
@@ -120,8 +104,53 @@ flex-grow: 0;
 margin: 32px 0px;
 `
 
+export const Separator = styled.hr`
+position: relative;
+width: 100%;
+top: 0%;
+bottom: 98.67%;
+background: rgba(240, 248, 255, 0.1225);
+margin-block-start: 0;
+margin-block-end: 0;
+border-style: solid;
+border-color: rgba(240, 248, 255, 0.0425);
+`
+
+//----------------------------------------------------- Form Components
+
 export const Form = styled.form`
 background-color: #22262D;
+`
+
+export const Label = styled.label`
+position: static;
+height: 16px;
+left: 0px;
+right: 0px;
+top: 0px;
+
+font-family: Montserrat, sans-serif, Helvetica;
+font-style: normal;
+font-weight: bold;
+font-size: 12px;
+line-height: 16px;
+/* identical to box height, or 133% */
+
+letter-spacing: 0.857143px;
+text-transform: uppercase;
+
+/* white/03.help */
+
+color: rgba(240, 248, 255, 0.32);
+
+
+/* Inside auto layout */
+
+flex: none;
+order: 0;
+align-self: stretch;
+flex-grow: 0;
+margin: 8px 0px;
 `
 
 export const Input = styled.input`
@@ -132,8 +161,8 @@ flex-direction: row;
 align-items: flex-start;
 padding: 10px 16px;
 
-position: static;
-width: 488px;
+
+width: 489px;
 left: calc(50% - 488px/2);
 top: 35.29%;
 bottom: 0%;
@@ -164,7 +193,40 @@ flex-grow: 0;
 margin: 8px 0px;
 `
 
+export const TextArea = styled.textarea`
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 10px 16px;
 
+&, select, textarea {
+    color: rgba(240, 248, 255, 0.64);
+}
+
+position: static;
+width: 488px;
+height: 140px;
+left: calc(50% - 488px/2);
+top: 14.63%;
+bottom: 0%;
+
+/* white/06.slight */
+
+background: rgba(240, 248, 255, 0.04);
+/* white/03.help */
+
+border: 1px solid rgba(240, 248, 255, 0.32);
+box-sizing: border-box;
+border-radius: 4px;
+
+/* Inside auto layout */
+
+flex: none;
+order: 1;
+align-self: stretch;
+flex-grow: 0;
+margin: 8px 0px 0px;
+`
 
 export const Submit = styled.input`
 display: flex;
