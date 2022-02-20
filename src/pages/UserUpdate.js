@@ -1,8 +1,11 @@
 import React from "react";
 import * as s from '../styles/UserUpdateStyles'; // Emotion s
 import { useState } from "react";
+
 import FormInput from '../components/FormInput'
 import FormTextArea from '../components/FormTextArea'
+import ProfilePic from '../components/ProfilePic'
+
 import UserData from '../data/UserData'
 import "../styles.css"
 
@@ -110,10 +113,7 @@ function UserUpdate() {
       </s.Frame668>
 
       <s.Frame668>
-        <s.InputContainer>
-          <s.Label htmlFor="first_name">First Name*</s.Label>
-          <s.Input type="text" name="first_name" />
-        </s.InputContainer>
+        <ProfilePic />
       </s.Frame668>
     </s.MainContainer>
     );

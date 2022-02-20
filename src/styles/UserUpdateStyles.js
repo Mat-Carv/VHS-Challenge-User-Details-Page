@@ -171,6 +171,10 @@ order: 0;
 align-self: stretch;
 flex-grow: 0;
 margin: 8px 0px;
+
+&#piclabel {
+    text-align: center
+}
 `
 
 export const Input = styled.input`
@@ -317,6 +321,41 @@ margin: 0px 16px;
 border-style: none;
 `
 
+// --------------------------------------------- Profile Picture
+
+export const ProfilePictureContainer = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+max-width: 100px;
+margin: 0px auto 50px;
+@media (min-width: 882px) {
+    margin: 80px auto 0px;
+  }
+`
+
+export const ProfilePic = styled.img`
+border: 2px solid rgba(240, 248, 255, 0.64);
+border-radius: 50%;
+height: 100px;
+width: 100px;
+margin: 10px 0;
+`
+
+export const RemoveButton = styled.span`
+position: static;
+width: 69px;
+height: 24px;
+text-align: center;
+font-family: Montserrat, sans-serif, Helvetica;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 24px;
+
+color: rgba(240, 248, 255, 0.64);
+`
 // --------------------------------------------- Errors
 
 export const InvalidError = styled.span`
