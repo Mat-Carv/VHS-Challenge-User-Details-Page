@@ -18,10 +18,8 @@ export const Frame668 = styled.section`
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: 0px;
 margin: 11px;
 position: static;
-width: 489px;
 width: 350px;
 @media (min-width: 520px) {
     width: 420px;
@@ -36,17 +34,8 @@ export const Frame667 = styled.div`
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: 0px;
-
 position: static;
 width: 100%;
-
-left: 0px;
-top: 0px;
-
-flex: none;
-order: 0;
-flex-grow: 0;
 margin: 0 0 32px;
 `
 
@@ -55,17 +44,9 @@ export const Frame171 = styled.div`
 display: flex;
 flex-direction: column;
 align-items: flex-start;
-padding: 0px;
-
 position: static;
 width: 100%;
 height: 75px;
-left: 0px;
-top: 792px;
-
-flex: none;
-order: 1;
-flex-grow: 0;
 margin: 30px 0px;
 `
 
@@ -73,61 +54,35 @@ export const Frame168 = styled.div`
 display: flex;
 flex-direction: row;
 align-items: flex-start;
-padding: 0px;
-
 position: static;
 width: 100%;
 height: 44px;
-left: 0px;
-top: 31px;
-
-flex: none;
-order: 1;
-flex-grow: 0;
 margin: 30px 0px;
 `
 
 export const InputContainer = styled.div`
-flex: none;
-order: 1;
-flex-grow: 0;
 margin: 16px 0px;
 width: 100%;
 `
 
 //----------------------------------------------------- Page Components
 export const ServiceTitle = styled.h3`
-position: relative;
+position: static;
 width: 106px;
 height: 32px;
-left: 0px;
-top: 0px;
-
 font-family: Montserrat, sans-serif, Helvetica;
 font-style: normal;
 font-weight: bold;
 font-size: 24px;
 line-height: 32px;
-/* identical to box height, or 133% */
-
 letter-spacing: 0.1px;
-
 color: #F0F8FF;
-
-
-/* Inside auto layout */
-
-flex: none;
-order: 0;
-flex-grow: 0;
 margin: 0 0 32px;
 `
 
 export const Separator = styled.hr`
-position: relative;
+position: static;
 width: 100%;
-top: 0%;
-bottom: 98.67%;
 background: rgba(240, 248, 255, 0.1225);
 margin-block-start: 0;
 margin-block-end: 0;
@@ -330,7 +285,7 @@ align-items: center;
 justify-content: center;
 max-width: 100px;
 margin: 0px auto 50px;
-@media (min-width: 882px) {
+@media (min-width: 900px) {
     margin: 80px auto 0px;
   }
 `
