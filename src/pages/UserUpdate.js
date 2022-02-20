@@ -3,6 +3,7 @@ import * as s from '../styles/UserUpdateStyles'; // Emotion s
 import { useState } from "react";
 import FormInput from '../components/FormInput'
 import FormTextArea from '../components/FormTextArea'
+import "../styles.css"
 
 function UserUpdate() { 
   const [values, setValues] = useState({

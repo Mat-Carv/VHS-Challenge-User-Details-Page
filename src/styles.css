@@ -5,3 +5,7 @@ input:invalid:not(:focus):not([value=""]) ~ #invaliderror{
 input:focus ~ #required {
     display: none;
 }
+
+textarea:focus ~ #required{
+    display: none;
+}

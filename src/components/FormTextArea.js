@@ -11,19 +11,17 @@ const FormTextArea = (props) => {
         } else {
             display = "block"
         }
-        console.log(display)
         return display
     }
 
     return(
         <s.InputContainer>
             <s.Label>{label}</s.Label>
-            <s.TextArea  
+            <s.TextArea 
                 {...inputProps} 
                 onChange={onChange}
             />
-
-            <s.RequiredError status={required}>This field is required</s.RequiredError>
+            <s.RequiredError id="required" status={required}>This field is required</s.RequiredError>
 
         </s.InputContainer>
     )
