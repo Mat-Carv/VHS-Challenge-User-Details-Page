@@ -13,13 +13,14 @@ const FormTextArea = (props) => {
         }
         return display
     }
-
+    
     return(
         <s.InputContainer>
             <s.Label>{label}</s.Label>
             <s.TextArea 
                 {...inputProps} 
                 onChange={onChange}
+                id="txta"
             />
             <s.RequiredError id="required" status={required}>This field is required</s.RequiredError>
 

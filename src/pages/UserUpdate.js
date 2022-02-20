@@ -3,19 +3,12 @@ import * as s from '../styles/UserUpdateStyles'; // Emotion s
 import { useState } from "react";
 import FormInput from '../components/FormInput'
 import FormTextArea from '../components/FormTextArea'
+import UserData from '../data/UserData'
 import "../styles.css"
 
 function UserUpdate() { 
-  const [values, setValues] = useState({
-    firstname: "Donald",
-    lastname: "Norman",
-    email: "useremail@gmail.com",
-    phone: "(089) 6364801845",
-    day: "15",
-    month: "May",
-    year: "1990",
-    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-  });
+  
+  const [values, setValues] = useState(UserData);
 
   const inputs = [
     {
@@ -68,7 +61,11 @@ function UserUpdate() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(values)
+  };
+
+  const handleDiscard = (e) => {
+    e.preventDefault();
+    setValues(UserData)
   };
 
   const onChange = (e) => {
@@ -88,7 +85,6 @@ function UserUpdate() {
               <FormInput 
                 key={input.id} 
                 {...input} 
-                value={values[input.name]} 
                 onChange={onChange}
               />
             ))}
@@ -98,7 +94,7 @@ function UserUpdate() {
               <s.Input type="date" name="date_of_birth" />
             </s.InputContainer>
 
-            <FormTextArea label="Bio*" name="bio" value={values.bio} onChange={onChange}/>
+            <FormTextArea {...textArea} onChange={onChange}/>
             
           </s.Frame667>
           
@@ -106,7 +102,7 @@ function UserUpdate() {
             <s.Separator></s.Separator>
             <s.Frame168>
               <s.Submit type="submit">Submit</s.Submit>
-              <s.Discard>Discard</s.Discard>
+              <s.Discard onClick={handleDiscard}>Discard</s.Discard>
             </s.Frame168>
           </s.Frame171>  
         </s.Form>

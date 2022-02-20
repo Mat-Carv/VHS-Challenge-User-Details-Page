@@ -1,10 +1,23 @@
+input:invalid:not(:focus):not([value=""]) {
+    outline: 1px solid #E32636;
+}
+
 input:invalid:not(:focus):not([value=""]) ~ #invaliderror{
     display: block;
+}
+
+input:not(:focus)[value=""] {
+    outline: 1px solid #E32636;
 }
 
 input:focus ~ #required {
     display: none;
 }
+
+/* Can't get this to work */
+/* textarea:not(:focus)[value=""] {
+    outline: 1px solid #E32636;
+} */
 
 textarea:focus ~ #required{
     display: none;

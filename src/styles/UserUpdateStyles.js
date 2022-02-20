@@ -201,6 +201,7 @@ border: 1px solid rgba(240, 248, 255, 0.32);
 &:focus {
     outline: 1px solid #27B18A;
 }
+
 box-sizing: border-box;
 border-radius: 4px;
 
