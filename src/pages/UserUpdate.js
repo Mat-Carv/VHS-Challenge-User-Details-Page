@@ -2,6 +2,7 @@ import React from "react";
 import * as s from '../styles/UserUpdateStyles'; // Emotion s
 import { useState } from "react";
 import FormInput from '../components/FormInput'
+import FormTextArea from '../components/FormTextArea'
 
 function UserUpdate() { 
   const [values, setValues] = useState({
@@ -12,11 +13,12 @@ function UserUpdate() {
     day: "15",
     month: "May",
     year: "1990",
-    text: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+    bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(values)
   };
 
   const onChange = (e) => {
@@ -32,27 +34,24 @@ function UserUpdate() {
           <s.Frame667>
             <s.ServiceTitle>Settings</s.ServiceTitle>
             
-            <FormInput label="First Name*" name="firstname" type="text" placeholder={values.firstname} onChange={onChange}/>
-            <FormInput label="Last Name*" name="lastname" type="text" placeholder={values.lastname} onChange={onChange}/>
-            <FormInput label="Email*" name="email" type="email" placeholder={values.email} onChange={onChange}/>
-            <FormInput label="Phone*" name="phone" type="text" placeholder={values.phone} onChange={onChange}/>
+            <FormInput label="First Name*" name="firstname" type="text" value={values.firstname} onChange={onChange}/>
+            <FormInput label="Last Name*" name="lastname" type="text" value={values.lastname} onChange={onChange}/>
+            <FormInput label="Email*" name="email" type="email" value={values.email} onChange={onChange}/>
+            <FormInput label="Phone*" name="phone" type="text" value={values.phone} onChange={onChange}/>
           
             <s.InputContainer>
               <s.Label htmlFor="date_of_birth">Select your date of birth*</s.Label>
               <s.Input type="date" name="date_of_birth" />
             </s.InputContainer>
 
-            <s.InputContainer>
-              <s.Label htmlFor="bio">Bio*</s.Label>
-              <s.TextArea name="bio" />
-            </s.InputContainer>
+            <FormTextArea label="Bio*" name="bio" value={values.bio} onChange={onChange}/>
             
           </s.Frame667>
           
           <s.Frame171>
             <s.Separator></s.Separator>
             <s.Frame168>
-              <s.Submit type="submit" onSubmit={handleSubmit}/>
+              <s.Submit type="submit"  onClick={handleSubmit}>Submit</s.Submit>
               <s.Discard>Discard</s.Discard>
             </s.Frame168>
           </s.Frame171>  

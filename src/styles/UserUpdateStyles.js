@@ -241,7 +241,7 @@ margin: 8px 0px 0px;
 }
 `
 
-export const Submit = styled.input`
+export const Submit = styled.button`
 display: flex;
 flex-direction: column;
 align-items: center;

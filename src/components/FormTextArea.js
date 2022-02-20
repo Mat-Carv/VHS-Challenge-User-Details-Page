@@ -1,12 +1,10 @@
 import * as s from '../styles/UserUpdateStyles';
 
-const FormInput = (props) => {
-    console.log(props.value)
+const FormTextArea = (props) => {
     return(
         <s.InputContainer>
             <s.Label>{props.label}</s.Label>
-            <s.Input 
-                type={props.type} 
+            <s.TextArea  
                 name={props.name} 
                 value={props.value} 
                 onChange={props.onChange}
@@ -15,4 +13,4 @@ const FormInput = (props) => {
     )
 }
 
-export default FormInput
+export default FormTextArea
