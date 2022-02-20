@@ -22,7 +22,13 @@ padding: 0px;
 margin: 11px;
 position: static;
 width: 489px;
-
+width: 350px;
+@media (min-width: 520px) {
+    width: 420px;
+  }
+@media (min-width: 1100px) {
+    width: 489px;
+}
 `
 
 // Container for the main body of the Form
@@ -52,7 +58,7 @@ align-items: flex-start;
 padding: 0px;
 
 position: static;
-width: 489px;
+width: 100%;
 height: 75px;
 left: 0px;
 top: 792px;
@@ -70,7 +76,7 @@ align-items: flex-start;
 padding: 0px;
 
 position: static;
-width: 495px;
+width: 100%;
 height: 44px;
 left: 0px;
 top: 31px;
@@ -86,6 +92,7 @@ flex: none;
 order: 1;
 flex-grow: 0;
 margin: 16px 0px;
+width: 100%;
 `
 
 //----------------------------------------------------- Page Components
@@ -132,6 +139,7 @@ border-color: rgba(240, 248, 255, 0.0425);
 
 export const Form = styled.form`
 background-color: #22262D;
+width: 100%;
 `
 
 export const Label = styled.label`
@@ -174,7 +182,7 @@ align-items: flex-start;
 padding: 10px 16px;
 
 
-width: 489px;
+width: 100%;
 left: calc(50% - 488px/2);
 top: 35.29%;
 bottom: 0%;
@@ -212,7 +220,7 @@ align-items: flex-start;
 padding: 10px 16px;
 
 position: static;
-width: 488px;
+width: 100%;
 height: 140px;
 left: calc(50% - 488px/2);
 top: 14.63%;
