@@ -5,6 +5,7 @@ import { useState } from "react";
 import FormInput from '../components/FormInput'
 import FormTextArea from '../components/FormTextArea'
 import ProfilePic from '../components/ProfilePic'
+import DatePicker from '../components/DatePicker'
 
 import UserData from '../data/UserData'
 import "../styles.css"
@@ -62,8 +63,15 @@ function UserUpdate() {
     required: true,
   }
 
+  const datePicker = {
+    dayValue: values.day,
+    monthValue: values.month,
+    yearValue: values.year,
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log(values.year, values.day, values.month)
   };
 
   const handleDiscard = (e) => {
@@ -94,7 +102,7 @@ function UserUpdate() {
           
             <s.InputContainer>
               <s.Label htmlFor="date_of_birth">Select your date of birth*</s.Label>
-              <s.Input type="date" name="date_of_birth" />
+              <DatePicker {...datePicker} onChange={onChange}/>
             </s.InputContainer>
 
             <FormTextArea {...textArea} onChange={onChange}/>
