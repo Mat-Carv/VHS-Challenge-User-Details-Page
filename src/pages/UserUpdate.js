@@ -77,9 +77,7 @@ function UserUpdate() {
     setTrigger("visible")
     setTimeout(() => {
       setTrigger("hidden")
-    }, 3000);
-    console.log(values.year, values.day, values.month)
-    
+    }, 3000);   
   };
 
   const handleDiscard = (e) => {

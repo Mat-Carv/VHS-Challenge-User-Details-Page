@@ -13,7 +13,7 @@ const FormInput = (props) => {
         }
         return display
     }
-    console.log(props.value)
+
     return(
         <s.InputContainer>
             <s.Label>{label}</s.Label>
