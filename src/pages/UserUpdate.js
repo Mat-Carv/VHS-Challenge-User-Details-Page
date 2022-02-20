@@ -63,7 +63,6 @@ function UserUpdate() {
     name: "bio",
     value: values.bio,
     required: true,
-    errorMessage: ""
   }
 
   const handleSubmit = (e) => {
@@ -85,7 +84,12 @@ function UserUpdate() {
             <s.ServiceTitle>Settings</s.ServiceTitle>
 
             {inputs.map((input) => (
-              <FormInput key={input.id} {...input} value={values[input.name]} onChange={onChange} />
+              <FormInput 
+                key={input.id} 
+                {...input} 
+                value={values[input.name]} 
+                onChange={onChange}
+              />
             ))}
           
             <s.InputContainer>

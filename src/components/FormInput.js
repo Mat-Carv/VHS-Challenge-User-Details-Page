@@ -12,7 +12,6 @@ const FormInput = (props) => {
         } else {
             display = "block"
         }
-        console.log(display)
         return display
     }
     
@@ -22,10 +21,10 @@ const FormInput = (props) => {
             <s.Input 
                 {...inputProps} 
                 onChange={onChange}
+ 
             />
             <s.InvalidError id="invaliderror">{errorMessage}</s.InvalidError>
-            
-            <s.RequiredError status={required}>This field is required</s.RequiredError>
+            <s.RequiredError id="required" status={required}>This field is required</s.RequiredError>
             
         </s.InputContainer>
     )

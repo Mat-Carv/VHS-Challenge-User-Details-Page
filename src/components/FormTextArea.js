@@ -1,7 +1,20 @@
 import * as s from '../styles/UserUpdateStyles';
+import "../styles.css"
 
 const FormTextArea = (props) => {
-    const { label, onChange, id, ...inputProps} = props
+    const { label, onChange, errorMessage, id, ...inputProps} = props
+
+    const required = () => {
+        let display = ""
+        if (props.value) {
+            display = "none"
+        } else {
+            display = "block"
+        }
+        console.log(display)
+        return display
+    }
+
     return(
         <s.InputContainer>
             <s.Label>{label}</s.Label>
@@ -9,7 +22,9 @@ const FormTextArea = (props) => {
                 {...inputProps} 
                 onChange={onChange}
             />
-            <span>{props.errorMessage}</span>
+
+            <s.RequiredError status={required}>This field is required</s.RequiredError>
+
         </s.InputContainer>
     )
 }

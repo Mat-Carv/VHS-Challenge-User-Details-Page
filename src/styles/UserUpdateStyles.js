@@ -132,7 +132,7 @@ background: rgba(240, 248, 255, 0.1225);
 margin-block-start: 0;
 margin-block-end: 0;
 border-style: solid;
-border-color: rgba(240, 248, 255, 0.0425);
+border-color: rgba(240, 248, 255, 0.0001);
 `
 
 //----------------------------------------------------- Form Components
@@ -279,7 +279,7 @@ border-radius: 8px;
 flex: none;
 order: 0;
 flex-grow: 0;
-margin: 0px 16px;
+margin: 0;
 border-style: none;
 `
 

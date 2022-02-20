@@ -1,3 +1,7 @@
-input:invalid ~ #invaliderror {
+input:invalid:not(:focus):not([value=""]) ~ #invaliderror{
     display: block;
+}
+
+input:focus ~ #required {
+    display: none;
 }
