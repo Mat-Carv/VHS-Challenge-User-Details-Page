@@ -63,6 +63,11 @@ margin: 30px 0px;
 export const InputContainer = styled.div`
 margin: 16px 0px;
 width: 100%;
+&#date-picker {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 `
 
 //----------------------------------------------------- Page Components
@@ -219,6 +224,38 @@ border-radius: 8px;
 
 margin: 0px 16px;
 border-style: none;
+`
+// --------------------------------------------- Date Picker
+
+export const Select = styled.select`
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 10px 16px;
+
+background: rgba(240, 248, 255, 0.04);
+
+border: 1px solid rgba(240, 248, 255, 0.32);
+box-sizing: border-box;
+border-radius: 4px;
+
+font-family: Montserrat, sans-serif, Helvetica;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
+color: #F0F8FF;
+
+&#month {
+    width: 176px;
+}
+&#day {
+    width: 126px;
+}
+&#year {
+    width: 137px;
+}
+
 `
 
 // --------------------------------------------- Profile Picture

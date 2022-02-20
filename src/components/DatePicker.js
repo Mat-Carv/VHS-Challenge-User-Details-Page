@@ -31,22 +31,22 @@ const DatePicker = (props) => {
     }
 
     return(
-        <s.InputContainer>
-            <select name="month" id="month" onChange={onChange}>
+        <s.InputContainer id="date-picker">
+            <s.Select name="month" id="month" onChange={onChange}>
                 {months.map((month, i) => (
                 <option value={month} key={i}>{month}</option>
                 ))}
-            </select>
-            <select name="day" id="day" onChange={onChange}>
+            </s.Select>
+            <s.Select name="day" id="day" onChange={onChange}>
                 {days.map((day, i) => (
                 <option value={day.toString()} key={i}>{day}</option>
                 ))}
-            </select>
-            <select name="year" id="year" onChange={onChange}>
+            </s.Select>
+            <s.Select name="year" id="year" onChange={onChange}>
                 {years.map((year, i) => (
                 <option value={year.toString()} key={i}>{year}</option>
                 ))}
-            </select>
+            </s.Select>
         </s.InputContainer>
     )
 }
