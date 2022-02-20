@@ -1,4 +1,5 @@
 import * as s from '../styles/UserUpdateStyles';
+import "../styles.css"
 
 const FormInput = (props) => {
     console.log(props.value)
@@ -22,7 +23,7 @@ const FormInput = (props) => {
                 {...inputProps} 
                 onChange={onChange}
             />
-            <s.InvalidError>{errorMessage}</s.InvalidError>
+            <s.InvalidError id="invaliderror">{errorMessage}</s.InvalidError>
             
             <s.RequiredError status={required}>This field is required</s.RequiredError>
             

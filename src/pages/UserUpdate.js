@@ -9,7 +9,7 @@ function UserUpdate() {
     firstname: "Donald",
     lastname: "Norman",
     email: "useremail@gmail.com",
-    phone: "(+089) 63648018",
+    phone: "(089) 63648018",
     day: "15",
     month: "May",
     year: "1990",
@@ -24,7 +24,7 @@ function UserUpdate() {
       type: "text",
       value: values.firstname,
       required: true,
-      pattern: "^[a-zA-Z]$",
+      pattern: "^[a-zA-Z]+$",
       errorMessage: "No numbers or special characters"
     },
     {
@@ -34,13 +34,14 @@ function UserUpdate() {
       type: "text",
       value: values.lastname,
       required: true,
+      pattern: "^[a-zA-Z]+$",
       errorMessage: "No numbers or special characters"
     },
     {
       id: 3,
       label: "Email*",
       name: "email",
-      type: "text",
+      type: "email",
       value: values.email,
       required: true,
       errorMessage: "Invalid Email"
@@ -52,7 +53,8 @@ function UserUpdate() {
       type: "text",
       value: values.phone,
       required: true,
-      errorMessage: "Invalid Phone number"
+      pattern: "^(\\+\\d{1,3}( )?)?((\\(\\d{1,3}\\))|\\d{1,3})[- .]?\\d{3,4}[- .]?\\d{6}$",
+      errorMessage: "Invalid Phone number. Accepted format: (0xx) xxxxxxxxx "
     } 
   ]
 
