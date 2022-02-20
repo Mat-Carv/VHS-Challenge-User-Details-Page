@@ -307,3 +307,37 @@ flex-grow: 0;
 margin: 0px 16px;
 border-style: none;
 `
+
+// --------------------------------------------- Errors
+
+export const InvalidError = styled.span`
+font-family: Montserrat, sans-serif, Helvetica;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 16px;
+
+letter-spacing: 0.2475px;
+
+color: #E32636;
+
+mix-blend-mode: normal;
+
+display: none;
+`
+
+export const RequiredError = styled.span`
+font-family: Montserrat, sans-serif, Helvetica;
+font-style: normal;
+font-weight: 500;
+font-size: 12px;
+line-height: 16px;
+
+letter-spacing: 0.2475px;
+
+color: #E32636;
+
+mix-blend-mode: normal;
+
+display : ${props => props.status}
+`

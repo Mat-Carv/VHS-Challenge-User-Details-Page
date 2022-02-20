@@ -2,7 +2,19 @@ import * as s from '../styles/UserUpdateStyles';
 
 const FormInput = (props) => {
     console.log(props.value)
-    const { label, onChange, id, ...inputProps} = props
+    const { label, onChange, errorMessage, id, ...inputProps} = props
+
+    const required = () => {
+        let display = ""
+        if (props.value) {
+            display = "none"
+        } else {
+            display = "block"
+        }
+        console.log(display)
+        return display
+    }
+    
     return(
         <s.InputContainer>
             <s.Label>{label}</s.Label>
@@ -10,7 +22,10 @@ const FormInput = (props) => {
                 {...inputProps} 
                 onChange={onChange}
             />
-            <span>{props.errorMessage}</span>
+            <s.InvalidError>{errorMessage}</s.InvalidError>
+            
+            <s.RequiredError status={required}>This field is required</s.RequiredError>
+            
         </s.InputContainer>
     )
 }

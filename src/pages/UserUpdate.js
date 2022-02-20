@@ -24,6 +24,7 @@ function UserUpdate() {
       type: "text",
       value: values.firstname,
       required: true,
+      pattern: "^[a-zA-Z]$",
       errorMessage: "No numbers or special characters"
     },
     {
