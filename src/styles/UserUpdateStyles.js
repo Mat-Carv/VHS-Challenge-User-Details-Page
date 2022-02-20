@@ -72,7 +72,6 @@ width: 100%;
 
 //----------------------------------------------------- Page Components
 export const ServiceTitle = styled.h3`
-position: static;
 width: 106px;
 height: 32px;
 font-family: Montserrat, sans-serif, Helvetica;
@@ -86,7 +85,6 @@ margin: 0 0 32px;
 `
 
 export const Separator = styled.hr`
-position: static;
 width: 100%;
 background: rgba(240, 248, 255, 0.1225);
 margin-block-start: 0;
@@ -103,7 +101,6 @@ width: 100%;
 `
 
 export const Label = styled.label`
-position: static;
 height: 16px;
 font-family: Montserrat, sans-serif, Helvetica;
 font-style: normal;
@@ -121,37 +118,27 @@ margin: 8px 0px;
 `
 
 export const Input = styled.input`
-display: flex;
-flex-direction: row;
-align-items: flex-start;
 padding: 10px 16px;
 width: 100%;
+background: rgba(240, 248, 255, 0.04);
+border: 1px solid rgba(240, 248, 255, 0.32);
+box-sizing: border-box;
+border-radius: 4px;
+margin: 8px 0px;
 
 &, select, textarea {
     color: rgba(240, 248, 255, 0.64);
 }
-
-background: rgba(240, 248, 255, 0.04);
-border: 1px solid rgba(240, 248, 255, 0.32);
-
 &:hover {
     border: 1px solid #F0F8FF;
 }
 &:focus {
     outline: 1px solid #27B18A;
 }
-
-box-sizing: border-box;
-border-radius: 4px;
-margin: 8px 0px;
 `
 
 export const TextArea = styled.textarea`
-display: flex;
-flex-direction: row;
-align-items: flex-start;
 padding: 10px 16px;
-position: static;
 width: 100%;
 height: 140px;
 background: rgba(240, 248, 255, 0.04);
@@ -170,14 +157,15 @@ margin: 8px 0px 0px;
 &:focus {
     outline: 1px solid #27B18A;
 }
+font-family: Montserrat, sans-serif, Helvetica;
+font-style: normal;
+font-weight: 500;
+font-size: 16px;
+line-height: 24px;
 `
 
 export const Submit = styled.button`
-display: flex;
-flex-direction: column;
-align-items: center;
 padding: 10px 24px;
-position: static;
 width: 167px;
 height: 44px;
 
@@ -200,11 +188,7 @@ border-style: none;
 `
 
 export const Discard = styled.button`
-display: flex;
-flex-direction: column;
-align-items: center;
 padding: 10px 24px;
-position: static;
 width: 113px;
 height: 44px;
 
@@ -228,29 +212,24 @@ border-style: none;
 // --------------------------------------------- Date Picker
 
 export const Select = styled.select`
-display: flex;
-flex-direction: row;
-align-items: flex-start;
 padding: 10px 16px;
-
 background: rgba(240, 248, 255, 0.04);
-
 border: 1px solid rgba(240, 248, 255, 0.32);
 box-sizing: border-box;
 border-radius: 4px;
-&:hover {
-    border: 1px solid #F0F8FF;
-}
-&:focus {
-    outline: 1px solid #27B18A;
-}
-
 font-family: Montserrat, sans-serif, Helvetica;
 font-style: normal;
 font-weight: 500;
 font-size: 16px;
 line-height: 24px;
 color: #F0F8FF;
+
+&:hover {
+    border: 1px solid #F0F8FF;
+}
+&:focus {
+    outline: 1px solid #27B18A;
+}
 
 &#month {
     width: 176px;
@@ -306,7 +285,6 @@ margin: 10px 0;
 `
 
 export const RemoveButton = styled.span`
-position: static;
 width: 69px;
 height: 24px;
 text-align: center;
