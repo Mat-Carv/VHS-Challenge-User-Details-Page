@@ -5,16 +5,17 @@ import img from '../data/placeholder.jpeg'
 const ProfilePic = () => {
     const uploadedImage = React.useRef(null);
     const imageUploader = React.useRef(null);
-    const {current} = uploadedImage;
-
+    
     const handleRemove = () => {
-        current.src = img
+        const {current} = uploadedImage;
+        current.src = img;
     };
 
     const handleImageUpload = (e) => {
         const [file] = e.target.files;
         if (file) {
         const reader = new FileReader();
+        const {current} = uploadedImage;
         current.file = file;
         reader.onload = (e) => {
             current.src = e.target.result;
