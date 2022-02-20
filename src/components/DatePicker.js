@@ -1,7 +1,7 @@
 import * as s from '../styles/UserUpdateStyles';
 
 const DatePicker = (props) => {
-    const { onChange, ...inputProps} = props
+    const { onChange } = props
 
     let years = [];
     for (var i = 2022; i >= 1930; i--) {

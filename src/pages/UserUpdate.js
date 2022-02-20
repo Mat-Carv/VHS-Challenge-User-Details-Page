@@ -6,6 +6,7 @@ import FormInput from '../components/FormInput'
 import FormTextArea from '../components/FormTextArea'
 import ProfilePic from '../components/ProfilePic'
 import DatePicker from '../components/DatePicker'
+import ToastMsg from '../components/ToastMsg'
 
 import UserData from '../data/UserData'
 import "../styles.css"
@@ -13,6 +14,7 @@ import "../styles.css"
 function UserUpdate() { 
   
   const [values, setValues] = useState(UserData);
+  const [trigger, setTrigger] = useState("hidden")
 
   const inputs = [
     {
@@ -69,9 +71,15 @@ function UserUpdate() {
     yearValue: values.year,
   }
 
+  
   const handleSubmit = (e) => {
     e.preventDefault();
+    setTrigger("visible")
+    setTimeout(() => {
+      setTrigger("hidden")
+    }, 3000);
     console.log(values.year, values.day, values.month)
+    
   };
 
   const handleDiscard = (e) => {
@@ -84,6 +92,8 @@ function UserUpdate() {
   }
 
   return (
+  <>
+    <ToastMsg trigger={trigger}/>
     <s.MainContainer>
       <s.Frame668>
         
@@ -124,6 +134,7 @@ function UserUpdate() {
         <ProfilePic />
       </s.Frame668>
     </s.MainContainer>
+  </>
     );
 };
 

@@ -319,5 +319,28 @@ line-height: 16px;
 letter-spacing: 0.2475px;
 color: #E32636;
 mix-blend-mode: normal;
-display : ${props => props.status}
+display : ${props => props.status};
+`
+
+// --------------------------------------------- Toast Notification
+
+export const ToastNotification = styled.div`
+position: fixed;
+display: flex;
+justify-content: center;
+align-items: center;
+top: 0;
+right: 0;
+height: 64px;
+width: 100%;
+vertical-align: middle;
+background: linear-gradient(89.97deg, rgba(39, 177, 138, 0.38) 0%, rgba(39, 177, 138, 0.68) 114.46%), #2A2E35;
+
+font-family: Montserrat, sans-serif, Helvetica;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 24px;
+color: #FFFFFF;
+visibility: ${props => props.status};
 `
