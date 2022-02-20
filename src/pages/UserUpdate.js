@@ -8,7 +8,7 @@ function UserUpdate() {
   const { register, handleSubmit, errors } = useForm();
   
   return (
-    <>
+    <s.MainContainer>
       <s.Frame668>
         
         <s.Form>
@@ -58,7 +58,14 @@ function UserUpdate() {
         </s.Form>
 
       </s.Frame668>
-    </>
+
+      <s.Frame668>
+        <s.InputContainer>
+          <s.Label htmlFor="first_name">First Name*</s.Label>
+          <s.Input type="text" name="first_name" />
+        </s.InputContainer>
+      </s.Frame668>
+    </s.MainContainer>
     );
 };
 

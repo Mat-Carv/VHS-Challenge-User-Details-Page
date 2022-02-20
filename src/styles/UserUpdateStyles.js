@@ -1,14 +1,26 @@
 import styled from '@emotion/styled'
 
 //----------------------------------------------------- Containers
+
+// Main Container
+export const MainContainer = styled.div`
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+justify-content: center;
+flex-wrap: wrap;
+max-width: 70em;
+margin: 5em auto 0;
+`
+
 // Container for the Form side of the page
-export const Frame668 = styled.div`
+export const Frame668 = styled.section`
 display: flex;
 flex-direction: column;
 align-items: flex-start;
 padding: 0px;
-
-position: absolute;
+margin: 11px;
+position: static;
 width: 489px;
 
 `
@@ -29,7 +41,7 @@ top: 0px;
 flex: none;
 order: 0;
 flex-grow: 0;
-margin: 32px 0px;
+margin: 0 0 32px;
 `
 
 // Container for the Save Changes & Discard Buttons
@@ -101,7 +113,7 @@ color: #F0F8FF;
 flex: none;
 order: 0;
 flex-grow: 0;
-margin: 32px 0px;
+margin: 0 0 32px;
 `
 
 export const Separator = styled.hr`
