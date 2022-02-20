@@ -1,14 +1,15 @@
 import * as s from '../styles/UserUpdateStyles';
 
 const FormTextArea = (props) => {
+    const { label, onChange, id, ...inputProps} = props
     return(
         <s.InputContainer>
-            <s.Label>{props.label}</s.Label>
+            <s.Label>{label}</s.Label>
             <s.TextArea  
-                name={props.name} 
-                value={props.value} 
-                onChange={props.onChange}
+                {...inputProps} 
+                onChange={onChange}
             />
+            <span>{props.errorMessage}</span>
         </s.InputContainer>
     )
 }

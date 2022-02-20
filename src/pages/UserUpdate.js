@@ -16,6 +16,53 @@ function UserUpdate() {
     bio: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
   });
 
+  const inputs = [
+    {
+      id: 1,
+      label: "First Name*",
+      name: "firstname",
+      type: "text",
+      value: values.firstname,
+      required: true,
+      errorMessage: "No numbers or special characters"
+    },
+    {
+      id: 2,
+      label: "Last Name*",
+      name: "lastname",
+      type: "text",
+      value: values.lastname,
+      required: true,
+      errorMessage: "No numbers or special characters"
+    },
+    {
+      id: 3,
+      label: "Email*",
+      name: "email",
+      type: "text",
+      value: values.email,
+      required: true,
+      errorMessage: "Invalid Email"
+    },
+    {
+      id: 4,
+      label: "Phone*",
+      name: "phone",
+      type: "text",
+      value: values.phone,
+      required: true,
+      errorMessage: "Invalid Phone number"
+    } 
+  ]
+
+  const textArea = {
+    label: "Bio*",
+    name: "bio",
+    value: values.bio,
+    required: true,
+    errorMessage: ""
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(values)
@@ -29,15 +76,14 @@ function UserUpdate() {
     <s.MainContainer>
       <s.Frame668>
         
-        <s.Form>
+        <s.Form onSubmit={handleSubmit}>
 
           <s.Frame667>
             <s.ServiceTitle>Settings</s.ServiceTitle>
-            
-            <FormInput label="First Name*" name="firstname" type="text" value={values.firstname} onChange={onChange}/>
-            <FormInput label="Last Name*" name="lastname" type="text" value={values.lastname} onChange={onChange}/>
-            <FormInput label="Email*" name="email" type="email" value={values.email} onChange={onChange}/>
-            <FormInput label="Phone*" name="phone" type="text" value={values.phone} onChange={onChange}/>
+
+            {inputs.map((input) => (
+              <FormInput key={input.id} {...input} value={values[input.name]} onChange={onChange} />
+            ))}
           
             <s.InputContainer>
               <s.Label htmlFor="date_of_birth">Select your date of birth*</s.Label>
@@ -51,7 +97,7 @@ function UserUpdate() {
           <s.Frame171>
             <s.Separator></s.Separator>
             <s.Frame168>
-              <s.Submit type="submit"  onClick={handleSubmit}>Submit</s.Submit>
+              <s.Submit type="submit">Submit</s.Submit>
               <s.Discard>Discard</s.Discard>
             </s.Frame168>
           </s.Frame171>  
