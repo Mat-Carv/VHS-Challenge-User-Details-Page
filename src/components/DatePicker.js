@@ -4,7 +4,7 @@ const DatePicker = (props) => {
     const { onChange, ...inputProps} = props
 
     let years = [];
-    for (var i = 1930; i <= 2022; i++) {
+    for (var i = 2022; i >= 1930; i--) {
         years.push(i);
     }
 
@@ -26,7 +26,7 @@ const DatePicker = (props) => {
     }
 
     let days = [];
-    for (var i = 1; i <= max; i++) {
+    for (let i = 1; i <= max; i++) {
         days.push(i);
     }
 
@@ -34,17 +34,17 @@ const DatePicker = (props) => {
         <s.InputContainer id="date-picker">
             <s.Select name="month" id="month" onChange={onChange}>
                 {months.map((month, i) => (
-                <option value={month} key={i}>{month}</option>
+                <s.Option value={month} key={i}>{month}</s.Option>
                 ))}
             </s.Select>
             <s.Select name="day" id="day" onChange={onChange}>
                 {days.map((day, i) => (
-                <option value={day.toString()} key={i}>{day}</option>
+                <s.Option value={day.toString()} key={i}>{day}</s.Option>
                 ))}
             </s.Select>
             <s.Select name="year" id="year" onChange={onChange}>
                 {years.map((year, i) => (
-                <option value={year.toString()} key={i}>{year}</option>
+                <s.Option value={year.toString()} key={i}>{year}</s.Option>
                 ))}
             </s.Select>
         </s.InputContainer>

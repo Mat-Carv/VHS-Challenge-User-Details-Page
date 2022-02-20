@@ -10,7 +10,7 @@ align-items: flex-start;
 justify-content: center;
 flex-wrap: wrap;
 max-width: 70em;
-margin: 5em auto 0;
+margin: 5em auto 6em;
 `
 
 // Container for the Form side of the page
@@ -238,6 +238,12 @@ background: rgba(240, 248, 255, 0.04);
 border: 1px solid rgba(240, 248, 255, 0.32);
 box-sizing: border-box;
 border-radius: 4px;
+&:hover {
+    border: 1px solid #F0F8FF;
+}
+&:focus {
+    outline: 1px solid #27B18A;
+}
 
 font-family: Montserrat, sans-serif, Helvetica;
 font-style: normal;
@@ -256,6 +262,25 @@ color: #F0F8FF;
     width: 137px;
 }
 
+&::-webkit-scrollbar { 
+    width: 6px;
+    background: #3A3F46;
+}
+
+&::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: rgba(240, 248, 255, 0.4);
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+`
+
+export const Option = styled.option`
+background: #3A3F46;
+border: 1px solid rgba(240, 248, 255, 0.12);
+box-sizing: border-box;
+box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12);
+border-radius: 8px;
 `
 
 // --------------------------------------------- Profile Picture
